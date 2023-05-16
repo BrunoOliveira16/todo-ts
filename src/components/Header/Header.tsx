@@ -1,5 +1,5 @@
 // React
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsSun, BsMoon } from 'react-icons/bs';
 import { RiTodoLine } from 'react-icons/ri';
 // CSS
@@ -17,13 +17,17 @@ const Header = () => {
     }
   }
 
+  useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
+
   return (
     <header className={styles.header}>
-        <div>
+        <div className={styles.header_logo}>
             <RiTodoLine />
         </div>
         <h1>TO DO List</h1>
-        <div onClick={toggleTheme}>
+        <div className={styles.header_theme} onClick={toggleTheme}>
             {theme === 'light-theme' ? <BsMoon /> : <BsSun />}
         </div>
     </header>

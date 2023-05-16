@@ -1,7 +1,9 @@
 .main {
-    min-height: 80vh;
+    min-height: 60vh;
     text-align: center;
     padding: 2em;
+    background-color: var(--bg-primary-color);
+    color: var(--text-second-color);
 }
 
 .main h2 {

@@ -2,10 +2,18 @@
     background-color: var(--bg-primary-color);
     color: var(--text-primary-color);
     text-align: center;
-    padding: 1em;
+    padding: 2rem;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.header_logo, .header_theme {
+    font-size: var(--medium-font-size);
+}
+
+.header_theme {
+    cursor: pointer;
 }
