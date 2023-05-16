@@ -10,14 +10,19 @@
 :root {
   /* ===================== Cores ===================== */
   --bg-primary-color: hsl(216, 18%, 16%);
+  --bg-primary-btn-color: #61dafb;
+  --bg-second-btn-color: #034253;
   --text-primary-color: hsl(219, 60%, 40%);
   --text-second-color: hsl(0, 0%, 92%);
+  --text-second-btn-color: hsl(0, 33%, 98%);
+  --border-primary-color: #FFFFFF;
 
   /* ================== Tipografia =================== */
   --first-font: 'Roboto', sans-serif;
   --h1-font-size: 2.5rem;
   --medium-font-size: 2rem;
 }
+
 
 /* ================================================= */
 /*                  LIGHT THEME                      */
@@ -26,7 +31,9 @@
   /* ===================== Cores ===================== */
   --bg-primary-color: #faf6f1;
   --text-second-color: #262626;
+  --border-primary-color: hsl(219, 60%, 40%);
 }
+
 
 /* ================================================= */
 /*                    RESET CSS                      */
@@ -42,6 +49,7 @@
 h1 {
   font-size: var(--h1-font-size);
 }
+
 
 /* ================================================= */
 /*           CLASSES CSS REUTILIZÁVEIS               */

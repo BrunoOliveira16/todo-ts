@@ -1,11 +1,14 @@
+// CSS
+import styles from './TaskForm.module.css';
+
 interface Props {
   btnText: string;
 }
 
 const TaskForm = ({btnText}: Props) => {
   return (
-    <form>
-      <div>
+    <form className={styles.form}>
+      <div className={styles.input_container}>
         <label htmlFor="title">Título</label>
         <input 
           type="text" 
@@ -13,7 +16,7 @@ const TaskForm = ({btnText}: Props) => {
           placeholder="Título da Tarefa" 
         />
       </div>
-      <div>
+      <div className={styles.input_container}>
         <label htmlFor="date">Data</label>
         <input 
           type="date" 
