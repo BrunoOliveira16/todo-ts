@@ -10,16 +10,36 @@ import { ITask } from '../../interfaces/Task';
 
 interface Props {
   btnText: string;
+  taskList: ITask[];
+  setTaskList?: React.Dispatch<React.SetStateAction<ITask[]>>;
 }
 
-const TaskForm = ({btnText}: Props) => {
+const TaskForm = ({btnText, taskList, setTaskList}: Props) => {
   const [ id, setId ] = useState<number>(0);
   const [ title, setTitle ] = useState<string>("");
-  const [ date, setDate ] = useState<Date>();
+  const [ date, setDate ] = useState<Date | null>(null);
 
-  const addTaskHandler = () => {}
+  const addTaskHandler = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-  // Fomatação da Data
+    // Gera um ID aleatório para a nova tarefa
+    const id = Math.floor(Math.random() * 1000);
+
+    // Formata a data antes de criar o novo objeto de tarefa
+    const formattedDate = date ? formatDate(date) : "";
+
+    // Cria um novo objeto de tarefa com os valores de ID, título e data
+    const newTask: ITask = {id, title, date: formattedDate}
+
+    // Adiciona a nova tarefa à lista de tarefas existente
+    setTaskList!([...taskList, newTask])
+
+    // Limpa os campos do formulário
+    setTitle("");
+    setDate(null);
+  }
+
+  // Define a função formatDate para formatar um objeto Date como uma string
   const formatDate = (date: Date) => {
     return date.toLocaleDateString('pt-BR', {
       day: '2-digit',
@@ -27,11 +47,6 @@ const TaskForm = ({btnText}: Props) => {
       year: 'numeric'
     });
   };
-
-  const formattedDate = date ? formatDate(date) : "";
-
-  console.log(title)
-  console.log(formattedDate)
 
   return (
     <form onSubmit={addTaskHandler} className={styles.form}>
@@ -42,6 +57,7 @@ const TaskForm = ({btnText}: Props) => {
           name="title" 
           placeholder="Título da Tarefa" 
           onChange={(e) => setTitle(e.target.value)}
+          value={title}
         />
       </div>
       <div className={styles.input_container}>
