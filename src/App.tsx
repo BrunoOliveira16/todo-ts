@@ -7,6 +7,9 @@ import Header from "./components/Header/Header";
 import TaskForm from './components/TaskForm/TaskForm';
 import TaskList from './components/TaskList/TaskList';
 
+// Interface
+import { ITask } from './interfaces/Task';
+
 function App() {
     return (
         <div>
