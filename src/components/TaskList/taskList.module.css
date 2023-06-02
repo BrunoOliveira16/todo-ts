@@ -1,0 +1,37 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 0 auto;
+    border-bottom: 1px solid #CCC;
+    padding: 1em;
+}
+
+.details {
+    text-align: left;
+}
+
+.details h4 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.actions svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: .5em;
+    color: var(--text-second-color);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.actions svg:hover {
+    color: var(--bg-primary-btn-color);
+}
