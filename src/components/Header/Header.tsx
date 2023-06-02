@@ -23,13 +23,15 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
+      <div className={styles.container}>
         <div className={styles.header_logo}>
-            <RiTodoLine />
-        </div>
-        <h1>TO DO List</h1>
-        <div className={styles.header_theme} onClick={toggleTheme}>
-            {theme === 'light-theme' ? <BsMoon /> : <BsSun />}
-        </div>
+              <RiTodoLine />
+          </div>
+          <h1>TO DO List</h1>
+          <div className={styles.header_theme} onClick={toggleTheme}>
+              {theme === 'light-theme' ? <BsMoon /> : <BsSun />}
+          </div>
+      </div>
     </header>
   );
 };
