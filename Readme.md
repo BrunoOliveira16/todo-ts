@@ -48,7 +48,7 @@ Este Projeto consiste na criação de um app de ToDo construido com react e type
 <br>
 
 ## 💻 Demonstração
-Para visualizar uma prévia do projeto <a href="#" target="_blank"><b>clique aqui</b></a>
+Para visualizar uma prévia do projeto <a href="https://todo-react-ts-bruno.netlify.app/" target="_blank"><b>clique aqui</b></a>
 
 <br>
 
