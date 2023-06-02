@@ -3,7 +3,7 @@
     height: 100%;
     position: absolute;
     background-color: var(--bg-primary-color);
-    opacity: 0.3;
+    opacity: 0.8;
 }
 
 .modal {
@@ -19,7 +19,8 @@
     left: 0;
     right: 0;
     z-index: 1;
-    background-color: var(--text-second-color);
+    background-color: var(--modal-bg-color);
+    border-radius: 1rem;
 }
 
 .modal h2 {
